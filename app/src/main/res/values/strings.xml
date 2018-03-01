@@ -14,5 +14,6 @@
     <string name="Cancel">Cancel</string>
     <string name="title_activity_pending_success">PendingSuccessActivity</string>
     <string name="sign_in_text">Sign in with your Google Account!</string>
+    <string name="register_text">Fill in your details.</string>
 
 </resources>
