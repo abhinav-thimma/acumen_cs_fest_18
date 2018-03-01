@@ -13,6 +13,6 @@
     <string name="gps_network_not_enabled">Location Not Enabled</string>
     <string name="Cancel">Cancel</string>
     <string name="title_activity_pending_success">PendingSuccessActivity</string>
-
+    <string name="sign_in_text">Sign in with your Google Account!</string>
 
 </resources>
