@@ -9,7 +9,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -30,12 +29,10 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class GoogleSingInActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 1;
     private static final String TAG = "INEXPERIENCE'S_LOGIN";
-    private static boolean flag = true;
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mProgressDialog;
-    private TextView skipnow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +50,6 @@ public class GoogleSingInActivity extends AppCompatActivity {
                     Intent intent = new Intent(GoogleSingInActivity.this, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    //if (flag)
-                  //      Toast.makeText(GoogleSingInActivity.this, "Google Sign in was successful", Toast.LENGTH_LONG).show();
-                    flag = false;
                     finish();
                 }
             }
