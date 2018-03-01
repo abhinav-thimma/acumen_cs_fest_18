@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/sponsor"
+            android:src="@drawable/acumencs"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_below="@id/sponsor"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="Presents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Acumen CS Fest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_android_map_api_key">AIzaSyC9UaKqLDwvIPnuoOPIZTCW3uB2e2E6Hbg</string>
+    <string name="open_location_settings">Enable</string>
+    <string name="gps_network_not_enabled">Location Not Enabled</string>
+    <string name="Cancel">Cancel</string>
+    <string name="title_activity_pending_success">PendingSuccessActivity</string>
+
+
+</resources>

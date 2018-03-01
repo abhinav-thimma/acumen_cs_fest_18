@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.saiprasadgarimella.navigation.RegisterActivity">
+
+
+    <EditText
+        android:id="@+id/nameReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phNumReg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/back_addtask"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/collegeReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameReg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:background="@drawable/back_addtask"
+        android:inputType="textPersonName"
+        android:layout_centerInParent="true"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        android:hint="College" />
+
+    <EditText
+        android:id="@+id/deptReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/collegeReg"
+        android:layout_alignStart="@+id/collegeReg"
+        android:layout_below="@+id/collegeReg"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/back_addtask"
+        android:ellipsize="start"
+        android:ems="10"
+        android:textColor="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:hint="Department"
+        android:textColorHint="@color/colorWhite"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <!--<EditText-->
+        <!--android:id="@+id/emailReg"-->
+        <!--style="@android:style/Widget.DeviceDefault.EditText"-->
+        <!--android:layout_width="wrap_content"-->
+
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignLeft="@+id/deptReg"-->
+        <!--android:layout_alignStart="@+id/deptReg"-->
+        <!--android:layout_below="@+id/deptReg"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:background="@drawable/back_addtask"-->
+        <!--android:ellipsize="start"-->
+        <!--android:ems="10"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:hint="Email ID"-->
+        <!--android:textColorHint="@color/colorWhite"-->
+        <!--android:inputType="textEmailAddress"-->
+        <!--android:padding="10dp" />-->
+
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_centerInParent="true"
+        android:textColorHint="@color/colorWhite"
+        android:text="Register" />
+
+    <EditText
+        android:id="@+id/phNumReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:background="@drawable/back_addtask"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Phone number"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite" />
+
+
+</RelativeLayout>
