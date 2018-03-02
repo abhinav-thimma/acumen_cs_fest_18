@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://C:\Users\Manu\Desktop\navigation\acumen_cs_fest_18.iml" filepath="C:\Users\Manu\Desktop\navigation\acumen_cs_fest_18.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/navigation.iml" filepath="$PROJECT_DIR$/navigation.iml" />
     </modules>

@@ -12,11 +12,11 @@
 
         <ImageView
             android:id="@+id/sponsor"
-            android:src="@drawable/acumencs"
+            android:src="@drawable/image001"
             android:scaleType="fitXY"
             android:layout_margin="@dimen/activity_vertical_margin"
             android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_height="100dp"
             tools:ignore="ContentDescription" />
 
         <TextView

@@ -40,7 +40,7 @@ public class LogoutFragment extends Fragment {
             FirebaseAuth.getInstance().signOut();
         }
 
-        startActivity(new Intent(getActivity(),GoogeSignInActivity.class));
+        startActivity(new Intent(getActivity(),GoogleSingInActivity.class));
 
         return inflater.inflate(R.layout.fragment_logout, container, false);
     }

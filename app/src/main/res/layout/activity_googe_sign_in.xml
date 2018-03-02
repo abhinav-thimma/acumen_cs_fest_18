@@ -1,61 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.saiprasadgarimella.navigation.GoogeSignInActivity"
-    >
+    tools:context="com.example.saiprasadgarimella.navigation.GoogleSingInActivity">
 
 
     <RelativeLayout
-        android:layout_centerInParent="true"
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        >
+        android:layout_centerInParent="true">
 
         <ImageView
-            android:id="@+id/logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignLeft="@+id/signInBtn"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/signInBtn"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/google"
-            tools:ignore="ContentDescription" />
 
-        <Button
-            android:id="@+id/signInBtn"
+            android:id="@+id/bot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/logo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:padding="10dp"
-            android:background="@drawable/sign_in_btn_back"
-            android:minHeight="35dp"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:text="Sign In using Google"
-            android:textAllCaps="false"
-            android:textColor="@color/colorWhite"
-            />
+            android:adjustViewBounds="true"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/acumen_bot" />
+
+        <TextView
+            android:id="@+id/signinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bot"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="cursive"
+            android:text="@string/sign_in_text"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/siginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/signinText"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
 
     </RelativeLayout>
 
 
     <!---->
     <!--<ImageButton-->
-        <!--android:id="@+id/signInBtn"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--tools:layout_editor_absoluteX="92dp"-->
-        <!--android:text="Yo"-->
-        <!--android:src="@drawable/google"-->
-        <!--tools:layout_editor_absoluteY="208dp">-->
+    <!--android:id="@+id/signInBtn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--tools:layout_editor_absoluteX="92dp"-->
+    <!--android:text="Yo"-->
+    <!--android:src="@drawable/google"-->
+    <!--tools:layout_editor_absoluteY="208dp">-->
 
     <!--</ImageButton>-->
 

@@ -94,8 +94,10 @@ public class RegisterActivity extends AppCompatActivity {
                     dref.child("College").setValue(college);
                     dref.child("Phone_Number").setValue(phNum);
                     dref.child("Department").setValue(dept);
+                    dref.child("UserMsgCount").setValue(0);
                     dref = dref.child("events");
-                    for (int i = 0; i < 20; i++) {
+
+                    for (int i = 1; i <= 21; i++) {
                         dref.child(i + "").setValue(0);
                     }
 

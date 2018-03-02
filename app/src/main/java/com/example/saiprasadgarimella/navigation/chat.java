@@ -1,6 +1,7 @@
 package com.example.saiprasadgarimella.navigation;
 
 import android.Manifest;
+import android.app.ActionBar;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -79,6 +80,11 @@ public class chat extends Fragment implements AIListener {
 
 
     LocationManagerClass locManager = null;
+
+
+
+    //user msg count
+    final long[] userMsgCount = new long[1];
 
 
     //suggestion buttons
@@ -192,10 +198,12 @@ public class chat extends Fragment implements AIListener {
             checkEverythingFlag = checkEverything();
 
 
+
         view=inflater.inflate(R.layout.fragment_chat, container, false);
         editText=(EditText)view.findViewById(R.id.message);
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerView);
         addBtn = (RelativeLayout)view.findViewById(R.id.addBtn);
+
 
 
         recyclerView.setHasFixedSize(true);
@@ -348,7 +356,7 @@ public class chat extends Fragment implements AIListener {
             });
 
             //Toast.makeText(getActivity(),ref.child("chat").toString(),Toast.LENGTH_LONG).show();
-            adapter = new FirebaseRecyclerAdapter<ChatMessage, chat_rec>(ChatMessage.class, R.layout.msglist, chat_rec.class, ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("chat")) {
+            adapter = new FirebaseRecyclerAdapter<ChatMessage, chat_rec>(ChatMessage.class, R.layout.msglist, chat_rec.class, ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("chat_recent")) {
                 @Override
                 protected void populateViewHolder(chat_rec viewHolder, ChatMessage model, int position) {
 
@@ -1559,7 +1567,7 @@ public class chat extends Fragment implements AIListener {
                             });
 
 
-                            Drawable res18 = getResources().getDrawable(R.drawable.poster);
+                            Drawable res18 = getResources().getDrawable(R.drawable.code_auction);
                             viewHolder.leftImg18.setImageDrawable(res18);
                             viewHolder.leftImg18.setVisibility(View.VISIBLE);
                             viewHolder.leftText18.setVisibility(View.VISIBLE);
@@ -1636,20 +1644,20 @@ public class chat extends Fragment implements AIListener {
 
                             Drawable res3 = getResources().getDrawable(R.drawable.chakradhar);
                             viewHolder.leftImg3.setImageDrawable(res3);
-                            viewHolder.leftImg3.setVisibility(View.VISIBLE);
+                            viewHolder.leftImg3.setVisibility(View.GONE);
                             viewHolder.leftBtn3.setVisibility(View.GONE);
                             viewHolder.leftText3.setText("Chakradhar\n 7893415264");
-                            viewHolder.leftText3.setVisibility(View.VISIBLE);
-                            viewHolder.ll3.setVisibility(View.VISIBLE);
+                            viewHolder.leftText3.setVisibility(View.GONE);
+                            viewHolder.ll3.setVisibility(View.GONE);
 
 
                             Drawable res4 = getResources().getDrawable(R.drawable.manohar);
                             viewHolder.leftImg4.setImageDrawable(res4);
-                            viewHolder.leftImg4.setVisibility(View.VISIBLE);
+                            viewHolder.leftImg4.setVisibility(View.GONE);
                             viewHolder.leftBtn4.setVisibility(View.GONE);
-                            viewHolder.leftText4.setVisibility(View.VISIBLE);
+                            viewHolder.leftText4.setVisibility(View.GONE);
                             viewHolder.leftText4.setText("Bandha Manohar\n 9676085369");
-                            viewHolder.ll4.setVisibility(View.VISIBLE);
+                            viewHolder.ll4.setVisibility(View.GONE);
 
                             Drawable res5 = getResources().getDrawable(R.drawable.shiva);
                             viewHolder.leftImg5.setImageDrawable(res5);
@@ -1679,11 +1687,11 @@ public class chat extends Fragment implements AIListener {
 
                             Drawable res8 = getResources().getDrawable(R.drawable.raj);
                             viewHolder.leftImg8.setImageDrawable(res8);viewHolder.leftBtn1.setVisibility(View.GONE);
-                            viewHolder.leftImg8.setVisibility(View.VISIBLE);
+                            viewHolder.leftImg8.setVisibility(View.GONE);
                             viewHolder.leftBtn8.setVisibility(View.GONE);
                             viewHolder.leftText8.setText("Raj\n 9705005121");
-                            viewHolder.leftText8.setVisibility(View.VISIBLE);
-                            viewHolder.ll8.setVisibility(View.VISIBLE);
+                            viewHolder.leftText8.setVisibility(View.GONE);
+                            viewHolder.ll8.setVisibility(View.GONE);
 
 
                             viewHolder.ll9.setVisibility(View.GONE);
@@ -1779,13 +1787,32 @@ public class chat extends Fragment implements AIListener {
                             viewHolder.ll.setVisibility(View.GONE);
 
 
-                            Drawable res1 = getResources().getDrawable(R.drawable.poster);
+                            Drawable res1 = getResources().getDrawable(R.drawable.image001);
                             viewHolder.leftImg1.setImageDrawable(res1);
                             viewHolder.leftImg1.setVisibility(View.VISIBLE);
                             viewHolder.leftBtn1.setVisibility(View.GONE);
                             viewHolder.leftText1.setText("NewEdge");
                             viewHolder.leftText1.setVisibility(View.VISIBLE);
                             viewHolder.ll1.setVisibility(View.VISIBLE);
+                            viewHolder.ll2.setVisibility(View.GONE);
+                            viewHolder.ll3.setVisibility(View.GONE);
+                            viewHolder.ll4.setVisibility(View.GONE);
+                            viewHolder.ll5.setVisibility(View.GONE);
+                            viewHolder.ll6.setVisibility(View.GONE);
+                            viewHolder.ll7.setVisibility(View.GONE);
+                            viewHolder.ll8.setVisibility(View.GONE);
+                            viewHolder.ll9.setVisibility(View.GONE);
+                            viewHolder.ll10.setVisibility(View.GONE);
+                            viewHolder.ll11.setVisibility(View.GONE);
+                            viewHolder.ll12.setVisibility(View.GONE);
+                            viewHolder.ll13.setVisibility(View.GONE);
+                            viewHolder.ll14.setVisibility(View.GONE);
+                            viewHolder.ll15.setVisibility(View.GONE);
+                            viewHolder.ll16.setVisibility(View.GONE);
+                            viewHolder.ll17.setVisibility(View.GONE);
+                            viewHolder.ll18.setVisibility(View.GONE);
+                            viewHolder.ll19.setVisibility(View.GONE);
+                            viewHolder.ll20.setVisibility(View.GONE);
                         }
 
                         else {
@@ -1846,6 +1873,10 @@ public class chat extends Fragment implements AIListener {
             });
 
             recyclerView.setAdapter(adapter);
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setItemViewCacheSize(10);
+            recyclerView.setDrawingCacheEnabled(true);
+            recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         }
         else{
             Toast.makeText(getContext(),"No Internet Connection",Toast.LENGTH_LONG).show();
@@ -1949,13 +1980,40 @@ public class chat extends Fragment implements AIListener {
     }
 
 
+    void getUserMsgCount()
+    {
+
+        //getting individual users msg count
+
+        ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("UserMsgCount").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                long count =  dataSnapshot.getValue(Long.class);
+                userMsgCount[0] = count;
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+    }
 
 
 
-    public void sendMessegeToBot(String message)
+
+    public void sendMessegeToBot(final String message)
     {
 
         ChatMessage chatMessage = new ChatMessage(message, "user");
+
+
+
+
+        getUserMsgCount();
 
 
 
@@ -1995,6 +2053,19 @@ public class chat extends Fragment implements AIListener {
             protected void onPostExecute(AIResponse response) {
                 if (response != null) {
 
+
+                    if(userMsgCount[0] >= 4)
+                    {
+                        ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("chat_recent").child(new Long(userMsgCount[0]- 4).toString()).removeValue();
+                        ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("chat_recent").child(new Long(userMsgCount[0]- 3).toString()).removeValue();
+
+                    }
+
+                    userMsgCount[0]++;
+                    ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("chat_recent").child(new Long(userMsgCount[0]).toString()).setValue(new ChatMessage(message,"user"));
+                    ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("UserMsgCount").setValue(userMsgCount[0]);
+
+
                     Result result = response.getResult();
                     String reply = result.getFulfillment().getSpeech();
 
@@ -2015,6 +2086,9 @@ public class chat extends Fragment implements AIListener {
 
 
                     ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("chat").push().setValue(chatMessage);
+                    userMsgCount[0]++;
+                    ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("chat_recent").child(new Long(userMsgCount[0]).toString()).setValue(chatMessage);
+                    ref.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("UserMsgCount").setValue(userMsgCount[0]);
                 }
             }
         }.execute(aiRequest);

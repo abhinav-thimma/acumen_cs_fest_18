@@ -29,9 +29,11 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+
         <activity
-            android:name=".GoogeSignInActivity"
-            android:noHistory="true" />
+            android:name=".GoogleSingInActivity"
+            />
+
         <activity
             android:name=".RegisterActivity"
             android:label="Register"

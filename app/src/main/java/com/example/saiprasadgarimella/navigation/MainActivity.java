@@ -1,6 +1,7 @@
 package com.example.saiprasadgarimella.navigation;
 
 import android.*;
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -72,12 +73,9 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar);
 
-
-
-
         if(FirebaseAuth.getInstance().getCurrentUser() == null)
         {
-            startActivity(new Intent(MainActivity.this,GoogeSignInActivity.class));
+            startActivity(new Intent(MainActivity.this,GoogleSingInActivity.class));
         }
         else {
 
@@ -104,6 +102,13 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(MainActivity.this,"No Internet Connection",Toast.LENGTH_LONG).show();
 
             }
+
+
+
+
+            final android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+            actionBar.setDisplayShowTitleEnabled(true);
+
 
 
 

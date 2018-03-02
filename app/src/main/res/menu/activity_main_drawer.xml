@@ -14,7 +14,7 @@
             android:title="Events" />
         <item
             android:id="@+id/nav_contactus"
-
+            
             android:title="Contact Us" />
         <item
             android:id="@+id/nav_qr"
