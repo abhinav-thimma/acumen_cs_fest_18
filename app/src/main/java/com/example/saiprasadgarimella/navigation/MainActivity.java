@@ -72,12 +72,9 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar);
 
-
-
-
         if(FirebaseAuth.getInstance().getCurrentUser() == null)
         {
-            startActivity(new Intent(MainActivity.this,GoogeSignInActivity.class));
+            startActivity(new Intent(MainActivity.this,GoogleSingInActivity.class));
         }
         else {
 
