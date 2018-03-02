@@ -103,6 +103,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "382269294022-bflve2k7qmpdk8ks7h2gm9711s50mvoe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saiprasadgarimella.navigation",
+            "certificate_hash": "cf94170cb20ec711e907e179db55b5603266e527"
+          }
+        },
+        {
+          "client_id": "382269294022-o72718r9o6uf1ovd9aiv48fvl7tpd1vk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saiprasadgarimella.navigation",
+            "certificate_hash": "3f9f23c6be89eca83302bc829e081961bda218c4"
+          }
+        },
+        {
           "client_id": "382269294022-uhl4jauid142rkl77rgp4m0ikbk9n2p6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
