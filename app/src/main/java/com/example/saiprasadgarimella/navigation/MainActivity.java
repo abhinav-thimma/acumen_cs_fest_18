@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
             navigationView.setNavigationItemSelectedListener(this);
 
             if(isNetworkAvailable()) {
-                fragment = new chat();
+                fragment = new WebChatFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.Frame, fragment).commitNow();
 
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity
 
 
             final android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-            actionBar.setDisplayShowTitleEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
 
 
 
@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity
             fragmentClass=QRFragment.class;
 
         } else if(id==R.id.nav_chat){
-            fragmentClass=chat.class;
+            fragmentClass=WebChatFragment.class;
         }
         else if(id == R.id.nav_logout)
             fragmentClass=LogoutFragment.class;
